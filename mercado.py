@@ -64,7 +64,7 @@ def cadastrar_produto() -> None:
     produto: Produto = Produto(nome, preco)
     produtos.append(produto)
 
-    print('O produto {Produto.nome} foi cadastrado com sucesso!')
+    print(f'O produto {produto.nome} foi cadastrado com sucesso!')
     sleep(2)
     menu()
 
@@ -81,8 +81,8 @@ def listar_produtos() -> None:
             sleep(1)
     else:
         print('Não há produtos cadastrados.')
-        sleep(2)
-        menu()
+    sleep(1)
+    menu()
 
 
 def comprar_produto() -> None:
@@ -124,11 +124,11 @@ def comprar_produto() -> None:
             else:
                 item = {produto: 1}
                 carrinho.append(item)
-                print('O produto {produto.nome} foi adicionado ao carrinho.')
+                print(f'O produto {produto.nome} foi adicionado ao carrinho.')
                 sleep(2)
                 menu()
         else:
-            print('O produto com código {codigo} não foi encontrado.')
+            print(f'O produto com código {codigo} não foi encontrado.')
             sleep(2)
             menu()
     else:
